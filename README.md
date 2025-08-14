@@ -9,14 +9,13 @@ Seja bem-vindo(a) ao Wazuh Detection as Code Lab! Aqui, estarão localizados tod
 - `rules/` - Diretório com os arquivos XML contendo as regras do Wazuh
 - `tests/` - Diretório com logs de amostra para as regras em produção, bem como scripts e utilitários
 
-# Branches
-- `new-rule/*` - Branches para novas regras, podendo serem submetidas em grupos em um mesmo branch. Sempre deverão ser mergeadas a branches de features
-- `feature/*` - Branches para um conjunto de novos arquivos de regra, como novas tecnologias ou produtos. Sempre deverão ser mergeadas à branch `main`
-- `bug-fix/*` - Branches para a resolução de problemas em regras já existentes. Podem ser mergeadas à branch `main` ou `feature/*`
-- `dev` (Protegida) - Branch de pré-produção, recebem novas regras e arquivos primeiro
-- `main` (Protegida) - Branch de produção
+# Estratégia de branching
+- `main` (Protegida) - Branch de produção, recebe as regras validadas ao fazer merge com a branch `dev` 
+- `dev` (Protegida) - Branch de homologação/pré-produção, recebem novas regras antes de ser mergeada à branch `main`
+- `new-rule/*` - Branches para novas regras, podendo serem submetidas em grupos em um mesmo branch. Sempre deverão ser mergeadas à branch `dev` primeiro
+- `bug-fix/*` - Branches para resolução de problemas em regras já existentes. Devem ser mergeadas à branch `main`
 
-# Fluxo operacional padrão 
+# Fluxo operacional padrão
 
 ## Possíveis fontes de entrada e/ou solicitações comuns
 - Solicitação de correção na regra ou grupo de regras
@@ -46,3 +45,4 @@ Seja bem-vindo(a) ao Wazuh Detection as Code Lab! Aqui, estarão localizados tod
 10. Sincronização de repositórios
     - `git pull origin main`
 11. Reinicialização do Wazuh Manager para aplicação das mudanças
+    - `systemctl restart wazuh-manager`
