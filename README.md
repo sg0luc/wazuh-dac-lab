@@ -10,7 +10,7 @@ Seja bem-vindo(a) ao Wazuh Detection as Code Lab! Aqui, estarão localizados tod
 - `tests/` - Diretório com logs de amostra para as regras em produção, bem como scripts e utilitários
 
 # Topologia do laboratório
-![Wazuh Detection as Code Lab](lab.png)
+![lab.png](https://media.discordapp.net/attachments/1063914323052859483/1405526134560657418/lab.png)
 
 # Branches
 - `new-rule/*` - Branches para novas regras, podendo serem submetidas em grupos em um mesmo branch. Sempre deverão ser mergeadas a branches de features
