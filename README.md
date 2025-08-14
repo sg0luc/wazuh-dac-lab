@@ -41,8 +41,14 @@ Seja bem-vindo(a) ao Wazuh Detection as Code Lab! Aqui, estarão localizados tod
     - Validação de match da lógica da regra com as amostras de log fornecidas na pasta logtest
 
 ## Etapa 3 - Deploy
-9. Merge request
+9. Pull request
 10. Sincronização de repositórios
     - `git pull origin main`
 11. Reinicialização do Wazuh Manager para aplicação das mudanças
     - `systemctl restart wazuh-manager`
+
+# Referências
+- [Wazuh ruleset as code (RaC)](https://wazuh.com/blog/wazuh-ruleset-as-code-rac/)
+- [Automating Security Detection Engineering: A hands-on guide to implementing Detection as Code](https://www.amazon.com.br/dp/1837636419)
+- [Detection-as-Code & CI/CD for Detection Engineering with Dennis Chow | Detection Opportunities EP 9](https://www.youtube.com/watch?v=Uw0r7lGN__Q)
+- [BSidesSF 2022 - Detection-as-code: Why it works and where to start (Kyle Bailey)](https://www.youtube.com/watch?v=VaZp7A6Q9zE)
