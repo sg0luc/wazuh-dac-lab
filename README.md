@@ -27,24 +27,23 @@ Seja bem-vindo(a) ao Wazuh Detection as Code Lab! Aqui, estarão localizados tod
 2. Realizar mudanças
 3. Executar simulação de adversários
 4. Coletar evidências e logs para teste
-5. Commit & push
 
 ## Etapa 2 - CI/CD
-6. XML Linting - `xmllint`
+5. XML Linting - `xmllint`
     - Esta etapa só será executada se:
         - Arquivos de regras (XML) tenham sido modificados e/ou adicionados
         - A branch não for **main** nem **production**
-7. Testes unitários - _if\_sid_, _description_, _mitre_, etc.
+6. Testes unitários - _if\_sid_, _description_, _mitre_, etc.
         - Busca por campos obrigatórios para o funcionamento correto das regras
-8. Testes de integração - `wazuh-logtest`
+7. Testes de integração - `wazuh-logtest`
     - Validação de match da lógica da regra com as amostras de log fornecidas na pasta logtest
 
 ## Etapa 3 - Deploy
-9. Pull request
+8. Pull request
     - Aprovação e merge
-11. Sincronização de repositórios
+9. Sincronização de repositórios
     - `git pull origin main`
-12. Reinicialização do Wazuh Manager para aplicação das mudanças
+10. Reinicialização do Wazuh Manager para aplicação das mudanças
     - `systemctl restart wazuh-manager`
 
 # Referências
